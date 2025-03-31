@@ -60,6 +60,12 @@
   color: #212121;
 }
 
+.profile__edit-btn:hover {
+  cursor: pointer;
+  color: #212121;
+  opacity: 70%;
+}
+
 .profile__add-btn {
   margin-left: auto;
   background-color: #212121;

@@ -44,6 +44,7 @@
 
 .card__like-btn:hover {
   opacity: 1;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
@@ -62,5 +63,10 @@
     height: 18px;
     background-size: contain;
     background-repeat: no-repeat;
+  }
+
+  .card__like-btn:hover {
+    cursor: pointer;
+    opacity: 40%;
   }
 }
