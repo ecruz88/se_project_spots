@@ -17,6 +17,10 @@
  box-sizing: border-box;
 }
 
+.modal__form {
+  margin-top: 32px;
+}
+
 .modal_type_preview {
   padding: 0 16px;
 }
@@ -54,7 +58,7 @@
   margin: 0;
 }
 
-.modal__close_type_preview {
+.modal__close-btn_type_preview {
   background-image: url(../images/close-light.svg);
   position: absolute;
   top: -10px;
@@ -103,10 +107,23 @@
   font-size: 20px;
 }
 
+.modal__input_type_error {
+border: 1px solid rgba(255, 0, 0, 0.6)
+}
+
 .modal__input:hover {
   cursor: pointer;
   opacity: 100%;
 }
+
+.modal__error{
+  display: block;
+  margin-top: 8px;
+  font-size: 16px;
+  color: #FF0000B2
+}
+
+.modal__error_visible {}
 
 .modal__submit-btn {
   width: 156px;
@@ -122,6 +139,13 @@
 .modal__submit-btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
+}
+
+.modal__submit-btn_disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+  background-color: #212121;
 }
 
 .modal__image-container {
