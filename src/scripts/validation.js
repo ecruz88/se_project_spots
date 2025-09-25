@@ -74,7 +74,7 @@ const setEventListeners = (formElement, config) => {
 
 }
 
-const enableValidation = (config) => {
+export const enableValidation = (config) => {
   const formList = Array.from(document.querySelectorAll(config.formSelector));
   formList.forEach((formElement) => {
     setEventListeners(formElement, config);
@@ -82,7 +82,7 @@ const enableValidation = (config) => {
 };
 
 
-enableValidation(settings);
+
 
 
 

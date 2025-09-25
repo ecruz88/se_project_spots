@@ -1,3 +1,7 @@
+import "./index.css";
+import {enableValidation, settings} from "./validation.js";
+import Api from "../utils/Api.js"
+
 const initialCards = [
   {
     name: "Golden Gate Bridge",
@@ -28,6 +32,30 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
 ];
+
+const api = new Api({
+  baseUrl: "https://around-api.en.tripleten-services.com/v1",
+  headers: {
+    authorization: "2f3adc24-9e38-4f02-a724-91b9dff1adb4",
+    "Content-Type": "application/json"
+  }
+});
+
+api.getInitialCards()
+.then((cards) =>{
+
+});
+
+.catch(console.error);
+
+api.getAppInfo()
+.then((cards) => {
+  console.log(cards);
+    cards.forEach((item) => {
+  const cardEL = getCardElement(item);
+  cardsList.append(cardEL);
+})
+})
 
 const profileEditButton = document.querySelector(".profile__edit-btn");
 const profileName = document.querySelector(".profile__name");
@@ -157,12 +185,6 @@ addCardFormElement.addEventListener("submit", function (evt) {
   disableButton(cardSubmitBtn, settings);
 });
 
-initialCards.forEach((item) => {
-  const cardEL = getCardElement(item);
-  cardsList.append(cardEL);
-
-});
-
 function handleEscape(evt) {
   if (evt.key === "Escape") {
     const openedModal = document.querySelector(".modal_opened");
@@ -181,3 +203,4 @@ modals.forEach((modal) => {
   });
 });
 
+enableValidation(settings);
