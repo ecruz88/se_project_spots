@@ -72,7 +72,7 @@ const setEventListeners = (formElement, config) => {
     });
   });
 
-}
+};
 
 export const enableValidation = (config) => {
   const formList = Array.from(document.querySelectorAll(config.formSelector));
@@ -82,6 +82,7 @@ export const enableValidation = (config) => {
 };
 
 
+enableValidation(settings);
 
 
 
