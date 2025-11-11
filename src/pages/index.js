@@ -1,8 +1,7 @@
 import "./index.css";
 import { enableValidation, settings, resetValidation, disableButton } from "../scripts/validation.js";
-import { setButtonText } from "../scripts/utils/helpers.js";
-import Api from "../scripts/utils/Api.js";
-import { initialCards } from "../scripts/utils/constants.js";
+import { setButtonText } from "../utils/helpers.js";
+import Api from "../scripts/Api.js";
 
 
 const api = new Api({
