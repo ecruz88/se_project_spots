@@ -20,7 +20,7 @@
 }
 
 .profile__avatar-container:hover .profile__avatar-btn {
-  visibility: hidden;
+  visibility: visible;
 }
 
 .profile__avatar-btn:after {

@@ -94,13 +94,6 @@ function createCardElement(data) {
   likeCountEl.textContent = data.likes ? data.likes.length : 0;
 
 
-  if (data.owner && data.owner._id === userId) {
-    deleteBtn.style.display = ""; 
-  } else {
-    deleteBtn.style.display = "none";
-  }
-
-
   if (data.likes?.some((like) => like._id === userId)) {
     likeBtn.classList.add("card__like-btn_active");
   } else {
@@ -112,7 +105,7 @@ function createCardElement(data) {
     const currentlyLiked = evt.currentTarget.classList.contains("card__like-btn_active");
     api.changeLikeCardStatus(data._id, !currentlyLiked)
       .then((updatedCard) => {
-        if (updatedCard.likes?.some((l) => l._id === userId)) {
+        if (!updatedCard.isLiked) {
           likeBtn.classList.add("card__like-btn_active");
         } else {
           likeBtn.classList.remove("card__like-btn_active");
