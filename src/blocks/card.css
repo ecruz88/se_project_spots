@@ -78,6 +78,10 @@
   opacity: 0.4;
 }
 
+.card__like-count {
+  display: none;
+}
+
 @media screen and (max-width: 627px) {
   .card__image {
     height: 288px;

@@ -18,6 +18,7 @@ This project is designed to be an interactive social media web application where
 -Flexbox
 -Media Queries
 -BEM
+-Webpack
 
 ### Images:
 
@@ -26,6 +27,11 @@ This project is designed to be an interactive social media web application where
 ### Link
 
 https://ecruz88.github.io/se_project_spots/
+
+Check out these videos, where I describe my project
+and some challenges I faced while building it:
+
+https://drive.google.com/file/d/1NKEm86h_6dGSvi8fU1bmDvu4onlPiSaK/view?usp=drive_link 
 
 https://drive.google.com/file/d/1Ce8XZ8Av09191XPRw19vkWEsc4Px-ihE/view?usp=drive_link
 

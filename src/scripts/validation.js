@@ -55,13 +55,9 @@ const resetValidation = (formElement, config) => {
 };
 
 
-// TODO - use the setting object in all functions 
-
 const setEventListeners = (formElement, config) => {
   const inputList = Array.from(formElement.querySelectorAll(config.inputSelector));
   const buttonElement = formElement.querySelector(config.submitButtonSelector);
-
-  // TODO handle initial states
 
   toggleButtonState(inputList, buttonElement, config);
 
@@ -72,7 +68,7 @@ const setEventListeners = (formElement, config) => {
     });
   });
 
-}
+};
 
 const enableValidation = (config) => {
   const formList = Array.from(document.querySelectorAll(config.formSelector));
@@ -81,8 +77,11 @@ const enableValidation = (config) => {
   });
 };
 
+export { enableValidation, settings, resetValidation, disableButton };
 
-enableValidation(settings);
+
+
+
 
 
 
